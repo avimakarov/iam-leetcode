@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 type pQueue struct {
 	k    int
@@ -56,6 +59,14 @@ func findKthLargestSlow(nums []int, k int) int {
 	}
 
 	return q.nth(k)
+}
+
+func findKthLargestFast(nums []int, k int) int {
+	sort.Slice(nums, func(i, j int) bool {
+		return nums[i] > nums[j]
+	})
+
+	return nums[k-1]
 }
 
 func main() {
