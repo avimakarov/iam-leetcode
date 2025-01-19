@@ -11,11 +11,13 @@
 0215$go$https://leetcode.com/problems/kth-largest-element-in-an-array/description/$priorityQueue 
 1137$go$https://leetcode.com/problems/n-th-tribonacci-number/description/$dp 
 1732$go$https://leetcode.com/problems/find-the-highest-altitude/$array 
+0841$go$https://leetcode.com/problems/keys-and-rooms$dfs 
 0017$go$https://leetcode.com/problems/letter-combinations-of-a-phone-number/$backTracking 
 1679$go$https://leetcode.com/problems/max-number-of-k-sum-pairs/$twoPointers 
 0994$go$https://leetcode.com/problems/rotting-oranges/$bfs 
 0437$go$https://leetcode.com/problems/path-sum-iii/$binaryTree 
 0605$go$https://leetcode.com/problems/can-place-flowers/description/$array 
+0643$go$https://leetcode.com/problems/maximum-average-subarray-i/description$slidingWindow 
 2095$go$https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/$linkedList 
 0151$go$https://leetcode.com/problems/reverse-words-in-a-string/description/$strings 
 0700$go$https://leetcode.com/problems/search-in-a-binary-search-tree/$binaryTree 
