@@ -19,7 +19,7 @@ class Task:
         self.__error_msg = ""
         self.__languages = []
 
-        for code_file in os.listdir("{}/code".format(num)):
+        for code_file in os.listdir("tasks/{}/code".format(num)):
             if not self.__read_meta():
                 self.__error = True
                 self.__error_msg = "mname failed"
@@ -35,7 +35,7 @@ class Task:
             self.__languages.append(code_file.split(".")[1])
 
     def __read_meta(self) -> bool:
-        with open("{}/meta".format(self.__num)) as file:
+        with open("tasks/{}/meta".format(self.__num)) as file:
             lines = [line.rstrip() for line in file]
 
         if len(lines) != 2:
@@ -109,8 +109,8 @@ def print_fail(msg: str) -> int:
     return 1
 
 def handle_task(num: str) -> Union[int, Task]:
-    meta_path = "/".join([num, "meta"])
-    code_folder = "/".join([num, "code"])
+    meta_path = "/".join(["tasks", num, "meta"])
+    code_folder = "/".join(["tasks", num, "code"])
 
     if not os.path.exists(meta_path):
         return print_fail(
@@ -144,9 +144,9 @@ def main() -> int:
     if not curr_folder.endswith("iam-leetcode"):
         return print_fail("script ran not in the target folder")
 
-    for item_name in os.listdir():
+    for item_name in os.listdir("tasks"):
         item = FolderItem(
-            item_name, folder_item_kind(item_name),
+            item_name, folder_item_kind("tasks/{}".format(item_name)),
         )
         if item.is_allowed():
             if item.is_task_folder():
