@@ -67,7 +67,7 @@ def generate_table_of_contents(tasks: list[SolvedTask]) -> Union[int, str]:
         )
 
     for i, k in enumerate(sorted(grouped_by_tag, key=len)):
-        res += "{}. {} \n\n".format(i+1, k)
+        res += "{}. {}\n".format(i+1, k)
         for i1, v in enumerate(grouped_by_tag[k]):
             res += "    {}. [{}](https://github.com/avimakarov/iam-leetcode/tree/main/{}/code) \n".format(i1+1, v.num, v.num)
 
