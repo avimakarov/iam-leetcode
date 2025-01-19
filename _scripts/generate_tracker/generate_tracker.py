@@ -3,7 +3,6 @@
 #   <номер задачи>$<языки программирования>$<ссылка на leetcode>$<тег>
 
 import os
-import re
 import sys
 
 from typing import Union
